@@ -20,3 +20,5 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about deployment for more information.
+
+##### if installed version of Nodejs is above 17, run in terminal: export NODE_OPTIONS=--openssl-legacy-provider
