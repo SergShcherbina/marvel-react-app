@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage as ErrorMessageForm } from 'formik';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useMarvelService from '../../services/MarvelServices'
 import ErrorMessage from '../errorMessage/ErrorMessage';
