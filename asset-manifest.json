@@ -7,8 +7,8 @@
     "static/js/2.409d1372.chunk.js": "/marvel-react-app/static/js/2.409d1372.chunk.js",
     "static/js/2.409d1372.chunk.js.map": "/marvel-react-app/static/js/2.409d1372.chunk.js.map",
     "main.css": "/marvel-react-app/static/css/main.b3a81fa6.chunk.css",
-    "main.js": "/marvel-react-app/static/js/main.bf7c76ce.chunk.js",
-    "main.js.map": "/marvel-react-app/static/js/main.bf7c76ce.chunk.js.map",
+    "main.js": "/marvel-react-app/static/js/main.24ff133c.chunk.js",
+    "main.js.map": "/marvel-react-app/static/js/main.24ff133c.chunk.js.map",
     "runtime-main.js": "/marvel-react-app/static/js/runtime-main.020db5b1.js",
     "runtime-main.js.map": "/marvel-react-app/static/js/runtime-main.020db5b1.js.map",
     "static/js/5.db309aa8.chunk.js": "/marvel-react-app/static/js/5.db309aa8.chunk.js",
@@ -52,6 +52,6 @@
     "static/js/runtime-main.020db5b1.js",
     "static/js/5.db309aa8.chunk.js",
     "static/css/main.b3a81fa6.chunk.css",
-    "static/js/main.bf7c76ce.chunk.js"
+    "static/js/main.24ff133c.chunk.js"
   ]
 }
