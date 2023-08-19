@@ -21,4 +21,8 @@ Your app is ready to be deployed!
 
 See the section about deployment for more information.
 
-##### if installed version of Nodejs is above 17, run in terminal: export NODE_OPTIONS=--openssl-legacy-provider
+####  export NODE_OPTIONS=--openssl-legacy-provider
+
+is used to install a Node.js environment setup that causes the danger of using the installed OpenSSL provider. 
+
+Run this command at the PowerShell prompt to set the NODE_OPTIONS environment variable to the desired value.
