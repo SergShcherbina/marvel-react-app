@@ -1,5 +1,11 @@
 import { useHttp } from "../components/hooks/useHttp";
 
+/**
+ * Кастомный хук для взаимодействия с API Marvel.
+ * Предоставляет методы для получения данных о персонажах и комиксах из API Marvel.
+ * Также предоставляет методы для управления ошибками и процессами запросов.
+ * @returns {Object} Объект с методами для работы с API Marvel.
+ */
 
 const useMarvelService = () => {
     const _apiBase = 'https://gateway.marvel.com:443/v1/public/';

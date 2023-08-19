@@ -11,7 +11,7 @@ const CharInfo = (props) => {
     const [char, setChar] = useState(null);
     const {getCharacter, clearError, process, setProcess} = useMarvelService();
 
-    const onCharLoded = (char) => {
+    const onCharLoaded = (char) => {
         setChar(char);
     };    
 
@@ -20,7 +20,7 @@ const CharInfo = (props) => {
 
         clearError();
         getCharacter(charId)
-            .then(res => {onCharLoded(res)})
+            .then(res => {onCharLoaded(res)})
             .then(() => setProcess('confirmed'))                   //устанавливаем состояние после того как приходит результат
     };
 
