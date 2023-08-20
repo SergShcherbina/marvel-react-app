@@ -15,7 +15,7 @@ const RandomChar = () => {
     useEffect(()=> {
         updateChar();
         setBlockShow(true);
-        // const timerId = setInterval(updateChar, 60000);               //переключение персонажейраз в минуту
+        // const timerId = setInterval(updateChar, 60000);               //переключение персонажей раз в минуту
 
         // return(()=> {                                                 //удаляем ссылку на таймер (обязательно!)
         //     clearInterval(timerId);
@@ -33,7 +33,7 @@ const RandomChar = () => {
         getCharacter(id)
             .then(onCharLoded)
             .then(() => setProcess('confirmed'))
-    };
+    }
 
     return (
         <CSSTransition classNames={'randomchar'} timeout={500} in={blockShow} unmountOnExit >

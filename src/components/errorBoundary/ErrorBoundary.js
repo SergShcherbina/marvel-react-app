@@ -2,13 +2,14 @@ import { Component } from "react/cjs/react.production.min";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
 
-class ErrorBoundary extends Component {                        //классовай компонент отлавливающий ошибки
+class ErrorBoundary extends Component {                             //классовай компонент отлавливающий ошибки
 
     state = {
         error: false
     };
 
     componentDidCatch(error, errorInfo) {                      //хук срабатывающий при ошибке
+        debugger
         console.log(error, errorInfo);
         this.setState({error: true})
     };
