@@ -1,5 +1,4 @@
-import { useState, useCallback } from "react/cjs/react.development";
-
+import {useCallback, useState} from "react";
 
 export const useHttp = () => {
     const [process, setProcess] = useState('waiting');

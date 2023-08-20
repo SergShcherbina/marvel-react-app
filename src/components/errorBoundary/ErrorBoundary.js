@@ -1,5 +1,6 @@
-import { Component } from "react/cjs/react.production.min";
+
 import ErrorMessage from "../errorMessage/ErrorMessage";
+import {Component} from "react";
 
 
 class ErrorBoundary extends Component {                             //классовай компонент отлавливающий ошибки
