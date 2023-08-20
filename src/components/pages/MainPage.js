@@ -24,20 +24,20 @@ const MainPage = () => {
                 />
                 <title>Marvel information portal</title>
             </Helmet>
-            {/*<ErrorBoundary>*/}
+            <ErrorBoundary>
                 <RandomChar />
-            {/*</ErrorBoundary>*/}
+            </ErrorBoundary>
             <div className="char__content">
-                {/*<ErrorBoundary>*/}
+                <ErrorBoundary>
                     <CharList getCharId={getCharId} />
-                {/*</ErrorBoundary>*/}
+                </ErrorBoundary>
                 <div className="char__sticky">
-                    {/*<ErrorBoundary>*/}
+                    <ErrorBoundary>
                         <CharInfo charId={selectedChar} />
-                    {/*</ErrorBoundary>*/}
-                    {/*<ErrorBoundary>*/}
+                    </ErrorBoundary>
+                    <ErrorBoundary>
                         <FormSearch/>
-                    {/*</ErrorBoundary>*/}
+                    </ErrorBoundary>
                 </div>
             </div>
             <img className="bg-decoration" src={decoration} alt="vision" />

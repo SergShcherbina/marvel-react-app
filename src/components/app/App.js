@@ -1,5 +1,5 @@
 import AppHeader from "../appHeader/AppHeader";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { lazy, Suspense } from "react";
 //
@@ -12,7 +12,8 @@ const SingleCharacterLayout = lazy(()=> import('../pages/singleCharacterLayout/S
 
 const App = () => {
     return (
-        <Router basename={process.env.PUBLIC_URL} >
+        //для размещения на gh-pages и корректной работы путей добавить HashRouter
+        <Router >
             <div className="app">
                 <AppHeader />
                 <main>
