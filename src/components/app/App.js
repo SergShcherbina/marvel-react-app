@@ -2,7 +2,6 @@ import AppHeader from "../appHeader/AppHeader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { lazy, Suspense } from "react";
-import('../pages/404')
 //
 const Page404 = lazy(() => import('../pages/404'))                     //! динамический импорт обяз после статических
 const MainPage = lazy(() => import('../pages/MainPage'))
@@ -13,7 +12,7 @@ const SingleCharacterLayout = lazy(()=> import('../pages/singleCharacterLayout/S
 
 const App = () => {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL} >
             <div className="app">
                 <AppHeader />
                 <main>
