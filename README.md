@@ -9,7 +9,7 @@ In the project directory, you can run:
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
-####yarn test
+#### yarn test
 Launches the test runner in the interactive watch mode.
 
 #### yarn build
@@ -20,9 +20,3 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about deployment for more information.
-
-####  export NODE_OPTIONS=--openssl-legacy-provider
-
-is used to install a Node.js environment setup that causes the danger of using the installed OpenSSL provider. 
-
-Run this command at the PowerShell prompt to set the NODE_OPTIONS environment variable to the desired value.
