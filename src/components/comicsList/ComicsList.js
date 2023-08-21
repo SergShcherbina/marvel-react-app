@@ -21,7 +21,7 @@ const setContent = (process, Component, newItemLoading) => {           //не и
 }
 
 const ComicsList = () => {
-    const [comics, setComics] = useState([]);                             //нач зн обязательно массив
+    const [comics, setComics] = useState([]);                               //нач зн обязательно массив
     const [offset, setOffset] = useState(0);                              //для отсчета количества комиксов передается в getAllComics
     const [newItemLoading, setNewItemLoading] = useState(false);          //для контроля disabled кнопки загрузки новых комиксов
     const [comicsEnded, setComicsEnded] = useState(false);                //для контроля display кнопки загрузки новых комиксов

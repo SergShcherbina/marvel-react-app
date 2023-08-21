@@ -12,11 +12,11 @@ const AppHeader = () => {
             <nav className="app__menu">
                 <ul>
                     <li><NavLink end        //'end' отвечает за строгое сравнение ссылки
-                                style={({isActive})=> ({'color': isActive ? '#9f0013': 'inherit' })}
+                                style={({isActive})=> (isActive ? {'color': '#fff', 'background': '#e62429' } : {'color': 'inherit'})}
                                 to="/">Characters</NavLink></li>
 
                     <li><NavLink            //!если убрать 'end', то всем ссылкам содержащим '/comics' применится этот style
-                                style={({isActive})=> ({'color': isActive ? '#9f0013': 'inherit' })}
+                                style={({isActive})=> (isActive ? {'color': '#fff', 'background': '#e62429' } : {'color': 'inherit'})}
                                 to="/comics">Comics</NavLink></li>
                 </ul>
             </nav>

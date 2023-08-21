@@ -15,11 +15,11 @@ const RandomChar = () => {
     useEffect(()=> {
         updateChar();
         setBlockShow(true);
-        // const timerId = setInterval(updateChar, 60000);               //переключение персонажей раз в минуту
+        const timerId = setInterval(updateChar, 60000);               //переключение персонажей раз в минуту
 
-        // return(()=> {                                                 //удаляем ссылку на таймер (обязательно!)
-        //     clearInterval(timerId);
-        // });
+        return(()=> {                                                 //удаляем ссылку на таймер (обязательно!)
+            clearInterval(timerId);
+        });
     }, [])
 
     const onCharLoded = (char) => {

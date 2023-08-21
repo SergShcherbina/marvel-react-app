@@ -64,21 +64,25 @@ const CharList = (props) => {
     }
 
     const renderItems = (characters) => {                               //формирование верстки из данных сервера
-        const charLi = characters.map((items, i)=> {            
+        const charLi = characters.map((items, i)=> {
             const {name, thumbnail, id} = items;
             const styleImg = thumbnail.includes('image_not_available') ? {objectFit: 'fill'} : null;
 
             return (
-                <CSSTransition key={id} timeout={500} classNames="char__item">
+                <CSSTransition key={id} timeout={5000} classNames="char__item">
                     <li className="char__item" 
                         key={id}
                         ref={(el)=> itemRefs.current[i] = el}              
                         onClick={() => (props.getCharId(id), focusOnItem(i))}
                         tabIndex={0}>
-                        <img src={thumbnail} alt={name} style={styleImg}/>
-                        <div className="char__name">{name}</div>
+                        <div className="char__wrapperImage">
+                            <img src={thumbnail} alt={name} style={styleImg}/>
+                        </div>
+                        <div className="char__wrapperName">
+                            <div className="char__wrapperName_name">{name}</div>
+                        </div>
                     </li> 
-                </CSSTransition> 
+                </CSSTransition>
             );
         });
 
@@ -91,7 +95,7 @@ const CharList = (props) => {
         )
     }    
 
-    const elements = useMemo(() => {                                    //убираем лишний рендеринг 
+    const elements = useMemo(() => {                                    //убираем лишний рендеринг
         //вместо второго аргумента Component можем передать ф-ю, тогда будет работать                                
         return setContent(process, ()=>renderItems(charList), newItemLoading) 
         // eslint-disable-next-line
@@ -113,7 +117,7 @@ const CharList = (props) => {
 }
 
 CharList.propTypes = {                                                  //проверка пропса с помощью PropTypes
-    getCharId: propTypes.func.isRequired                                //прверяем что пропс передан и содержит функцию 
+    getCharId: propTypes.func.isRequired                                //прверяем что пропс передан и содержит функцию
 }
 
 export default CharList;

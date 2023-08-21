@@ -10,7 +10,9 @@
         font-size: 28px;
         line-height: 37px;
         span {
-            color: $main-color;
+            color: #fff;
+            padding: 0 10px;
+            background-color:  $main-color;
         }
     }
     &__menu {
@@ -22,8 +24,8 @@
             line-height: 32px;
             li {
                 margin: 0 8px;
-                a:hover {
-                    color: $main-color;
+                a {
+                    padding: 0 8px;
                 }
             }
         }
