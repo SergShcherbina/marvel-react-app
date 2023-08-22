@@ -22,7 +22,7 @@ const setContent = (process, Component, result) => {           //не импор
 }
 
 const validate = values => {                                                    //созд ф-ю по валидации
-        const errors = {};                                                      //обьект в который собираем ошибки 
+        const errors = {};                                                   //обьект в который собираем ошибки
         
         if(!values.search){
             errors.search = 'Required field';        
@@ -50,16 +50,21 @@ const FormSearch = () => {
             .then(()=> setProcess('confirmed'))
     }
 
-    const result = !char ? null : char.length > 0 ? 
-        <>
-            <div className='form__success' >There is! Visit</div>
-            <Link to={`/character/${char[0].id}`} 
-                className="button button__secondary form__button">
-                <div className="inner">to pasge </div>                 
-            </Link> 
-        </> : <div className='form__error' >The character was not found. Check the name and try again</div>
+    const result = !char ? null : char.length > 0 ?
 
-    console.log();
+        <>
+            {char.map(el => {
+                return (
+                    <>
+                        <div className='form__success' >{el.name}</div>
+                        <Link to={`/character/${el.id}`}
+                              className="form__link">
+                            <img src={el.thumbnail} alt={el.name}/>
+                        </Link>
+                    </>
+                )
+            })}
+        </> : <div className='form__error' >The character was not found. Check the name and try again</div>
     
     return (
         <Formik 

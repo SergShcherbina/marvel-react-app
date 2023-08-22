@@ -33,7 +33,7 @@ const ComicsList = () => {
     };
 
     const onSetComics = (newComics) => {
-        if (newComics.length < 8 ){                                      //если длинна подгруженного массива < 8 
+        if (newComics.length < 8 ){                                            //если длинна подгруженного массива < 8
             setComicsEnded(true)
         }      
         

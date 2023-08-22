@@ -43,7 +43,7 @@ const SingleCharacterLayout = ({data}) => {
                         })}       
                     </ul> 
                 </div>
-                <Link to="/" className="single-comic__back">Back to all comics</Link>
+                <Link to="/" className="single-comic__back">Back to all</Link>
             </div>
         </>
     )

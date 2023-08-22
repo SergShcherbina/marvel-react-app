@@ -24,7 +24,7 @@ const setContent = (process, Component, newItemLoading) => {           //не и
 const CharList = (props) => {
 
     const [charList, setCharList] = useState([]);
-    const [offset, setOffset] = useState(210);
+    const [offset, setOffset] = useState(140);
     const [newItemLoading, setNewItemLoading] = useState(false);
     const [charEnded, setCharEnded] = useState(false);
     const {process, setProcess, getAllCharacters} = useMarvelService();
@@ -46,7 +46,7 @@ const CharList = (props) => {
 
         setCharList(() => [...charList, ...newCharList]);
         setNewItemLoading(false);
-        setOffset(ofset => ofset + 9);
+        setOffset(offset => offset + 9);
         setCharEnded(ended)
     };
 

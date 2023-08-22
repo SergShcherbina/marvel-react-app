@@ -10,23 +10,25 @@ import { useHttp } from "../components/hooks/useHttp";
 const useMarvelService = () => {
     const _apiBase = 'https://gateway.marvel.com:443/v1/public/';
     const _apiKey = 'apikey=e085346ae8f6005895c9c698543ab5ab';
-    const _baseOffset = 210 
-    const {request, clearError, process, setProcess} = useHttp();             //получаем из хука обьект с методами     
+    const _baseOffset = 140
+    const {request, clearError, process, setProcess} = useHttp();                        //получаем из хука объект с методами
     
     const getAllCharacters = async (offset = _baseOffset) => {           //если аргумент не передается, то используем _baseOffset
         const res = await request(`${_apiBase}characters?limit=9&offset=${offset}&${_apiKey}`);
-        return res.data.results.map(_trensformCharacter);                //или .map(item => this._trensformCharacter(item))   
+        return res.data.results.map(_transformCharacter);                                       //или .map(item => this._transformCharacter(item))
     };
 
     const getCharacter = async(id) => {
         const res  = await request(`${_apiBase}characters/${id}?${_apiKey}`);
-        return _trensformCharacter(res.data.results[0])
+        return _transformCharacter(res.data.results[0])
     };
-    const searchCharacter = async(name) => {                             //поиск персонажа по имени
-        const res  = await request(`${_apiBase}characters?name=${name}&${_apiKey}`);
-        return res.data.results.map(_trensformCharacter) 
+
+    const searchCharacter = async(name) => {                                       //поиск персонажа по имени
+        const res  = await request(`${_apiBase}characters?nameStartsWith=${name}&${_apiKey}`);
+        return res.data.results.map(_transformCharacter)
     };
-    const _trensformCharacter = (char) => {
+
+    const _transformCharacter = (char) => {
         return {
             name: char.name,
             description: char.description,
