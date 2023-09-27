@@ -136,6 +136,9 @@
   .randomchar {
     grid-template-columns: repeat(1, 100%);
 
+    &__block {
+      height: 220px;
+    }
   }
 }
 
