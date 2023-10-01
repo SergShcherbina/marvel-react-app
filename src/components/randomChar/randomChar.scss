@@ -144,6 +144,8 @@
 
 @media (max-width: 576px) {
   .randomchar {
+    min-height: 566px;
+    align-items: end;
 
     &__block, &__static {
       gap: 10px;
@@ -181,6 +183,9 @@
 
     &__title {
       font-size: 18px;
+    }
+    &__static {
+      text-align: center;
     }
   }
 }
