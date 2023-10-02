@@ -10,34 +10,44 @@ const CharInfo = (props) => {
     const {charId} = props;
     const [char, setChar] = useState(null);
     const {getCharacter, clearError, process, setProcess} = useMarvelService();
+    const [isOpen, setIsOpen ] = useState(false)
 
     const onCharLoaded = (char) => {
         setChar(char);
     };    
 
     const updateChar = () => {
-        if(!charId) return;                                        //если приходит null, то запрос не делаем
+        if(!charId) return;                                                    //если приходит null, то запрос не делаем
+        setIsOpen(true)
 
         clearError();
         getCharacter(charId)
             .then(res => {onCharLoaded(res)})
-            .then(() => setProcess('confirmed'))                   //устанавливаем состояние после того как приходит результат
+            .then(() => {
+                setProcess('confirmed')                            //устанавливаем состояние после того как приходит результат
+            })
     };
 
     useEffect(() => {
         updateChar();
     }, [charId]);
 
+    const handleClick = () => {
+        setIsOpen(false)
+    }
+
     return (
         <>
-            <div className="char__info">
-                {setContent(process, View, char)}
-            </div> 
+            <div className={isOpen ? 'wrapperInfo' : null} onClick={handleClick}>
+                <div className={ isOpen ? 'char__active char__info' : 'char__info'} >
+                    {setContent(process, View, char)}
+                </div>
+            </div>
         </>
     )    
 }
 
-export const View = ({data}) => {                                      //переименовали так как из setContent возвр уже data вместо char
+export const View = ({data}) => {                                            //переименовали так как из setContent возвр уже data вместо char
     const {name, description, thumbnail, homepage, wiki, comics} = data;
     const styleImgChar = thumbnail.includes('image_not_available') ? {objectFit: 'contain'} : null; 
 

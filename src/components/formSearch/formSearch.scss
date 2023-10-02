@@ -1,0 +1,77 @@
+.form {
+  display: grid;
+  bottom: -180px;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 20px;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(0 0 0 / 25%);
+
+  &__label {
+    grid-column: 1;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__input {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(0 0 0 / 10%);
+    box-shadow: 2px 4px 8px rgb(0 0 0 / 25%);
+  }
+
+  &__error {
+    grid-column: 1;
+    color: rgb(208, 8, 8);
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  &__success {
+    grid-column: 1;
+    color: rgb(8, 154, 3);
+    font-weight: bold;
+    margin-left: 5px;
+    align-self: center;
+  }
+
+  & .button__main {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  &__link {
+    grid-column: 2;
+    justify-self: center;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+}
+
+@media (max-width: 415px) {
+  .form {
+    padding: 15px;
+    gap: 10px;
+
+    &__label {
+      font-size: 14px;
+    }
+  }
+}
+
+

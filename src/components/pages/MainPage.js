@@ -4,7 +4,7 @@ import CharList from "../charList/CharList";
 import CharInfo from "../charInfo/CharInfo";
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 import { useState } from "react";
-import FormSearch from "../form/FormSearch";
+import FormSearch from "../formSearch/FormSearch";
 import Helmet from 'react-helmet';
 
 

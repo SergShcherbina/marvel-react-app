@@ -2,6 +2,7 @@ import AppHeader from "../appHeader/AppHeader";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { lazy, Suspense } from "react";
+import './app.scss';
 //
 const Page404 = lazy(() => import('../pages/404'))                     //! динамический импорт обяз после статических
 const MainPage = lazy(() => import('../pages/MainPage'))

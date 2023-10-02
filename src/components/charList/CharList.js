@@ -1,6 +1,6 @@
 import './charList.scss';
-import { useEffect, useState, useRef, useMemo} from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import {useEffect, useState, useRef, useMemo} from 'react';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import useMarvelService from '../../services/MarvelServices';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -8,15 +8,15 @@ import propTypes from "prop-types";
 
 const setContent = (process, Component, newItemLoading) => {           //не импортируем а делаем кастомный из-за newItemLoading
     switch (process) {
-        case 'waiting': 
-            return  <Spinner/>;
-        case 'loading': 
+        case 'waiting':
+            return <Spinner/>;
+        case 'loading':
             return newItemLoading ? <Component/> : <Spinner/>;
-        case 'confirmed': 
+        case 'confirmed':
             return <Component/>;
-        case 'error': 
+        case 'error':
             return <ErrorMessage/>;
-        default :  
+        default :
             throw new Error('Unexpected process state');
     }
 }
@@ -28,11 +28,11 @@ const CharList = (props) => {
     const [newItemLoading, setNewItemLoading] = useState(false);
     const [charEnded, setCharEnded] = useState(false);
     const {process, setProcess, getAllCharacters} = useMarvelService();
-    
-    useEffect(()=> {
+
+    useEffect(() => {
         updateCharList()
     }, []);
-    
+
     const onRequest = (offset) => {
         setNewItemLoading(true)
         updateCharList(offset);
@@ -40,9 +40,9 @@ const CharList = (props) => {
 
     const onCharListLoaded = (newCharList) => {
         let ended = false;
-        if(newCharList.length < 9){                                     //Если длинна нового массива меньше 9
+        if (newCharList.length < 9) {                                     //Если длинна нового массива меньше 9
             ended = true;
-        }   
+        }
 
         setCharList(() => [...charList, ...newCharList]);
         setNewItemLoading(false);
@@ -63,17 +63,22 @@ const CharList = (props) => {
         itemRefs.current[id].focus();
     }
 
+    const handleClick = (id, i) => {
+        props.getCharId(id)
+        focusOnItem(i)
+    }
+
     const renderItems = (characters) => {                               //формирование верстки из данных сервера
-        const charLi = characters.map((items, i)=> {
+        const charLi = characters.map((items, i) => {
             const {name, thumbnail, id} = items;
             const styleImg = thumbnail.includes('image_not_available') ? {objectFit: 'fill'} : null;
 
             return (
                 <CSSTransition key={id} timeout={5000} classNames="char__item">
-                    <li className="char__item" 
+                    <li className="char__item"
                         key={id}
-                        ref={(el)=> itemRefs.current[i] = el}              
-                        onClick={() => (props.getCharId(id), focusOnItem(i))}
+                        ref={(el) => itemRefs.current[i] = el}
+                        onClick={() => handleClick(id, i)}
                         tabIndex={0}>
                         <div className="char__wrapperImage">
                             <img src={thumbnail} alt={name} style={styleImg}/>
@@ -81,7 +86,7 @@ const CharList = (props) => {
                         <div className="char__wrapperName">
                             <div className="char__wrapperName_name">{name}</div>
                         </div>
-                    </li> 
+                    </li>
                 </CSSTransition>
             );
         });
@@ -93,11 +98,11 @@ const CharList = (props) => {
                 </TransitionGroup>
             </ul>
         )
-    }    
+    }
 
     const elements = useMemo(() => {                                    //убираем лишний рендеринг
         //вместо второго аргумента Component можем передать ф-ю, тогда будет работать                                
-        return setContent(process, ()=>renderItems(charList), newItemLoading) 
+        return setContent(process, () => renderItems(charList), newItemLoading)
         // eslint-disable-next-line
     }, [process])
 
@@ -107,9 +112,9 @@ const CharList = (props) => {
             <button className="button button__main button__long"
                     disabled={newItemLoading}
                     onClick={() => onRequest(offset)}
-                    style={{'display': charEnded ? 'none' : 'block'}}>                            
+                    style={{'display': charEnded ? 'none' : 'block'}}>
                 <div className="inner">
-                    {newItemLoading ? 'Loading...' : 'load more'} 
+                    {newItemLoading ? 'Loading...' : 'load more'}
                 </div>
             </button>
         </div>
