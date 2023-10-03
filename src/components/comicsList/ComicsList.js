@@ -66,7 +66,7 @@ const ComicsList = () => {
                     <li className="comics__item"
                         key={i}                                          //в key порядковый номер, так как id повторяются
                         >
-                        <Link to={`/comics/${id}`}>                          
+                        <Link to={`/comics/${id}`}>
                             <img src={images} alt="ultimate war" className="comics__item-img"/>
                             <div className="comics__item-name">{title}</div>
                             <div className="comics__item-price">{prices ? prices + ' $' : null}</div>

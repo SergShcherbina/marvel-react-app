@@ -49,9 +49,11 @@
       justify-content: center;
       gap: 20px;
     }
+
     &__title {
       display: flex;
       flex-direction: column;
+
       a {
         display: flex;
         flex-direction: column;
@@ -61,6 +63,7 @@
         letter-spacing: 1px;
 
       }
+
       span {
         padding: 6px;
         font-size: 2.5rem;

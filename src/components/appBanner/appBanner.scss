@@ -1,21 +1,52 @@
 @import '../../style/variables.scss';
 
 .app {
-    &__banner {
-        width: 100%;
-        background-color: $dark;
-        height: 100px;
-        padding: 0 25px 0 45px;
-        display: grid;
-        grid-template-columns: 152px auto 133px;
-        margin-bottom: 50px;
-        &-text {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-            color: #FFFFFF;
-            padding-left: 83px;
-            padding-top: 18px;
-        }
+  &__banner {
+    width: 100%;
+    background-color: $dark;
+    height: 100px;
+    padding: 0 25px 0 45px;
+    display: grid;
+    grid-template-columns: 152px auto 133px;
+    align-items: center;
+
+    &-text {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+      padding-left: 83px;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    &__banner {
+      padding: 0 1%;
+      justify-content: space-between;
+
+      img:last-of-type{
+        display: none;
+      }
+
+      &-text {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .app {
+    &__banner {
+      grid-template-columns: 152px 1fr;
+      gap: 5px;
+
+      &-text {
+        font-size: 22px;
+      }
+    }
+  }
 }
