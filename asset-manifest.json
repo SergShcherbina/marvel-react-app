@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/marvel-react-app/static/css/main.c8f8cce7.css",
-    "main.js": "/marvel-react-app/static/js/main.5eb052ac.js",
+    "main.css": "/marvel-react-app/static/css/main.8fc6f0f0.css",
+    "main.js": "/marvel-react-app/static/js/main.b365e4c2.js",
     "static/js/346.7f245b77.chunk.js": "/marvel-react-app/static/js/346.7f245b77.chunk.js",
-    "static/css/978.78509b1b.chunk.css": "/marvel-react-app/static/css/978.78509b1b.chunk.css",
+    "static/css/978.9aa41273.chunk.css": "/marvel-react-app/static/css/978.9aa41273.chunk.css",
     "static/js/978.3e76b413.chunk.js": "/marvel-react-app/static/js/978.3e76b413.chunk.js",
     "static/css/509.51b5c231.chunk.css": "/marvel-react-app/static/css/509.51b5c231.chunk.css",
     "static/js/509.a81e76bc.chunk.js": "/marvel-react-app/static/js/509.a81e76bc.chunk.js",
@@ -22,10 +22,10 @@
     "static/media/Avengers.png": "/marvel-react-app/static/media/Avengers.4065c8f9c94e3d8b039a.png",
     "static/media/Avengers_logo.png": "/marvel-react-app/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/marvel-react-app/index.html",
-    "main.c8f8cce7.css.map": "/marvel-react-app/static/css/main.c8f8cce7.css.map",
-    "main.5eb052ac.js.map": "/marvel-react-app/static/js/main.5eb052ac.js.map",
+    "main.8fc6f0f0.css.map": "/marvel-react-app/static/css/main.8fc6f0f0.css.map",
+    "main.b365e4c2.js.map": "/marvel-react-app/static/js/main.b365e4c2.js.map",
     "346.7f245b77.chunk.js.map": "/marvel-react-app/static/js/346.7f245b77.chunk.js.map",
-    "978.78509b1b.chunk.css.map": "/marvel-react-app/static/css/978.78509b1b.chunk.css.map",
+    "978.9aa41273.chunk.css.map": "/marvel-react-app/static/css/978.9aa41273.chunk.css.map",
     "978.3e76b413.chunk.js.map": "/marvel-react-app/static/js/978.3e76b413.chunk.js.map",
     "509.51b5c231.chunk.css.map": "/marvel-react-app/static/css/509.51b5c231.chunk.css.map",
     "509.a81e76bc.chunk.js.map": "/marvel-react-app/static/js/509.a81e76bc.chunk.js.map",
@@ -40,7 +40,7 @@
     "705.bd75da3e.chunk.js.map": "/marvel-react-app/static/js/705.bd75da3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8f8cce7.css",
-    "static/js/main.5eb052ac.js"
+    "static/css/main.8fc6f0f0.css",
+    "static/js/main.b365e4c2.js"
   ]
 }
