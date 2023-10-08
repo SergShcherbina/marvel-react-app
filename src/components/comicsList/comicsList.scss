@@ -1,7 +1,4 @@
 .comics {
-  &__list {
-    margin-top: 45px;
-  }
 
   &__grid {
     display: grid;
@@ -44,10 +41,6 @@
 
 @media (max-width: 700px) {
   .comics {
-    &__list {
-      margin-top: 25px;
-    }
-
     &__grid {
       row-gap: 15px;
       justify-content: space-around;
