@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/marvel-react-app/static/css/main.eddc6509.css",
-    "main.js": "/marvel-react-app/static/js/main.67a01e70.js",
+    "main.js": "/marvel-react-app/static/js/main.87bad416.js",
     "static/js/346.7f245b77.chunk.js": "/marvel-react-app/static/js/346.7f245b77.chunk.js",
     "static/css/978.f8a3924e.chunk.css": "/marvel-react-app/static/css/978.f8a3924e.chunk.css",
     "static/js/978.3e76b413.chunk.js": "/marvel-react-app/static/js/978.3e76b413.chunk.js",
-    "static/css/509.4c450f0c.chunk.css": "/marvel-react-app/static/css/509.4c450f0c.chunk.css",
+    "static/css/509.5ca6ee82.chunk.css": "/marvel-react-app/static/css/509.5ca6ee82.chunk.css",
     "static/js/509.a81e76bc.chunk.js": "/marvel-react-app/static/js/509.a81e76bc.chunk.js",
-    "static/css/963.030d4f60.chunk.css": "/marvel-react-app/static/css/963.030d4f60.chunk.css",
+    "static/css/963.bd13b725.chunk.css": "/marvel-react-app/static/css/963.bd13b725.chunk.css",
     "static/js/963.fbbe8101.chunk.js": "/marvel-react-app/static/js/963.fbbe8101.chunk.js",
-    "static/css/635.0fb01de8.chunk.css": "/marvel-react-app/static/css/635.0fb01de8.chunk.css",
+    "static/css/635.c80b96da.chunk.css": "/marvel-react-app/static/css/635.c80b96da.chunk.css",
     "static/js/635.d46f415c.chunk.js": "/marvel-react-app/static/js/635.d46f415c.chunk.js",
     "static/css/49.2a59bcc5.chunk.css": "/marvel-react-app/static/css/49.2a59bcc5.chunk.css",
     "static/js/49.51fe2ac3.chunk.js": "/marvel-react-app/static/js/49.51fe2ac3.chunk.js",
@@ -23,15 +23,15 @@
     "static/media/Avengers_logo.png": "/marvel-react-app/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/marvel-react-app/index.html",
     "main.eddc6509.css.map": "/marvel-react-app/static/css/main.eddc6509.css.map",
-    "main.67a01e70.js.map": "/marvel-react-app/static/js/main.67a01e70.js.map",
+    "main.87bad416.js.map": "/marvel-react-app/static/js/main.87bad416.js.map",
     "346.7f245b77.chunk.js.map": "/marvel-react-app/static/js/346.7f245b77.chunk.js.map",
     "978.f8a3924e.chunk.css.map": "/marvel-react-app/static/css/978.f8a3924e.chunk.css.map",
     "978.3e76b413.chunk.js.map": "/marvel-react-app/static/js/978.3e76b413.chunk.js.map",
-    "509.4c450f0c.chunk.css.map": "/marvel-react-app/static/css/509.4c450f0c.chunk.css.map",
+    "509.5ca6ee82.chunk.css.map": "/marvel-react-app/static/css/509.5ca6ee82.chunk.css.map",
     "509.a81e76bc.chunk.js.map": "/marvel-react-app/static/js/509.a81e76bc.chunk.js.map",
-    "963.030d4f60.chunk.css.map": "/marvel-react-app/static/css/963.030d4f60.chunk.css.map",
+    "963.bd13b725.chunk.css.map": "/marvel-react-app/static/css/963.bd13b725.chunk.css.map",
     "963.fbbe8101.chunk.js.map": "/marvel-react-app/static/js/963.fbbe8101.chunk.js.map",
-    "635.0fb01de8.chunk.css.map": "/marvel-react-app/static/css/635.0fb01de8.chunk.css.map",
+    "635.c80b96da.chunk.css.map": "/marvel-react-app/static/css/635.c80b96da.chunk.css.map",
     "635.d46f415c.chunk.js.map": "/marvel-react-app/static/js/635.d46f415c.chunk.js.map",
     "49.2a59bcc5.chunk.css.map": "/marvel-react-app/static/css/49.2a59bcc5.chunk.css.map",
     "49.51fe2ac3.chunk.js.map": "/marvel-react-app/static/js/49.51fe2ac3.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.eddc6509.css",
-    "static/js/main.67a01e70.js"
+    "static/js/main.87bad416.js"
   ]
 }
