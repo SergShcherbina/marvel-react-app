@@ -1,76 +1,116 @@
 @import '../../../style/variables.scss';
 
 .single-comic {
-    display: grid;
-    grid-template-columns: 293px  630px auto;
-    column-gap: 50px;
-    align-items: start;
-    &__wrapper-char-img{
-        width: 293px;
-        height: 293px;
+  display: grid;
+  grid-template-columns: 293px  630px auto;
+  gap: 40px;
+  align-items: start;
+
+  &__wrapper-char-img {
+    width: 293px;
+    height: 293px;
+  }
+
+  &__char-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 25px;
+  }
+
+  &__info {
+    margin-top: 20px;
+  }
+
+  &__back {
+    justify-self: end;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    &:hover {
+      color: $main-color;
     }
-    &__char-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+  }
+
+  &__comics {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+
+    &-list {
+      overflow-y: scroll;
+      position: relative;
+      margin-top: 10px;
+      max-height: 563px;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      &::-webkit-scrollbar { //стиль полосы прокрутки
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: 5px 5px 5px -5px #50222261 inset;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #ca0018da;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                color-stop(.5, rgba(255, 255, 255, 0.384)),
+                color-stop(.5, transparent), to(transparent));
+      }
     }
-    &__name {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 29px;
+
+    &-item {
+      width: 100%;
+      padding: 0px 10px;
+      line-height: 25px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-top: 10px;
+
+      &:hover {
+        background-color: #a0001318;
+        transform: translateY(1px);
+        transition: 0.1s transform;
+      }
     }
-    &__descr {
-        font-size: 18px;
-        line-height: 24px;
-        margin-top: 25px;
-    }
-    &__info {
-        margin-top: 20px;
-    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .single-comic {
+    grid-template-columns:  293px 1fr;
+
     &__back {
-        justify-self: end;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 24px;
-        &:hover {
-            color: $main-color;
-        }
+      grid-column: 2;
     }
-    &__comics {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 24px;
-        &-list {
-            overflow-y: scroll;
-            position: relative;
-            margin-top: 10px;
-            max-height: 563px;
-            background-color: rgba(255, 255, 255, 0.5);
-            &::-webkit-scrollbar {                              //стиль полосы прокрутки
-                width: 7px;
-            }
-            &::-webkit-scrollbar-track {
-                -webkit-box-shadow: 5px 5px 5px -5px #50222261 inset;
-            }
-            &::-webkit-scrollbar-thumb {
-                border-radius: 5px;
-                background-color: #ca0018da;
-                background-image: -webkit-gradient(linear, 0 0, 0 100%,
-                                        color-stop(.5, rgba(255, 255, 255, 0.384)),
-                                        color-stop(.5, transparent), to(transparent));
-            }
-        }
-        &-item {
-            width: 100%;
-            padding: 0px 10px;
-            line-height: 25px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            margin-top: 10px;
-            &:hover {
-                background-color: #a0001318;
-                transform: translateY(1px);
-                transition: 0.1s transform;
-            }
-        }
+  }
+}
+
+@media (max-width: 600px) {
+  .single-comic {
+    grid-template: auto /   1fr;
+    gap: 20px;
+
+    & > div {
+      justify-self: center;
     }
+
+    &__back {
+      grid-column: 1;
+    }
+  }
+
 }
