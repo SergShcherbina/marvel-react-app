@@ -1,4 +1,6 @@
-https://sergshcherbina.github.io/marvel-react-app/
+### https://sergshcherbina.github.io/marvel-react-app/
+<hr>
+
 ## Getting Started with Create React App
 This project was bootstrapped with Create React App.
 
