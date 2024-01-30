@@ -5,7 +5,8 @@ import AppBanner from '../appBanner/AppBanner';
 import setContent from '../../utils/setContent';
 
 const SinglePage = ({Component, dataType}) => {
-    const {id} = useParams();                                     //получаем id из адресной строки 
+    const {id} = useParams();
+    //получаем id из адресной строки
     const [data, setData] = useState({});  
     const {process, setProcess, getComic, getCharacter, clearError} = useMarvelService();
 

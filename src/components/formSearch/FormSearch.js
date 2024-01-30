@@ -56,10 +56,12 @@ const FormSearch = () => {
             {char.map(el => {
                 return (
                     <>
-                        <div className='form__success' >{el.name}</div>
-                        <Link to={`/character/${el.id}`}
-                              className="form__link">
-                            <img src={el.thumbnail} alt={el.name}/>
+
+                        <Link to={`/character/${el.id}`} className="form__link">
+                            <p className='form__success' >{el.name}</p>
+                            <div className="form__link-picture">
+                                <img src={el.thumbnail} alt={el.name}/>
+                            </div>
                         </Link>
                     </>
                 )

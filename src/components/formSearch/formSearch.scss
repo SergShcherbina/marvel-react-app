@@ -43,13 +43,18 @@
   }
 
   &__link {
-    grid-column: 2;
-    justify-self: center;
+    grid-column: span 2;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-picture{
     height: 50px;
     width: 50px;
-    transition: all 0.3s;
+    }
 
-    & > img {
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -57,7 +62,7 @@
     }
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateX(-5px);
     }
   }
 

@@ -66,7 +66,7 @@ const View = ({data}) => {
     }, [data])
 
     const {name, description, thumbnail, homepage, wiki} = data;
-    const descrFix = !description ? 'Описание отсутствует' : description.slice(0,230) + '...';
+    const descrFix = !description ? 'No description' : description.slice(0,230) + '...';
 
     //если в названии картинки есть строка "image_not_available" то меняем свойство objectFit
     const styleImgChar = thumbnail.includes('image_not_available') ? {objectFit: 'contain'} : null;  
