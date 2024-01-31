@@ -1,4 +1,4 @@
-import decoration from "../../resources/img/vision.png";
+// import decoration from "../../resources/img/vision.png";
 import RandomChar from "../randomChar/RandomChar";
 import CharList from "../charList/CharList";
 import CharInfo from "../charInfo/CharInfo";
@@ -41,7 +41,7 @@ const MainPage = () => {
 
                 </div>
             </div>
-            <img className="bg-decoration" src={decoration} alt="vision" />
+            {/*<img className="bg-decoration" src={decoration} alt="vision" />*/}
         </>
     );
 };

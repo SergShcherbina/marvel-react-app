@@ -4,13 +4,14 @@ import useMarvelService from '../../services/MarvelServices';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import setContent from '../../utils/setContent';
+import closeIcon from '../../resources/img/close-icon.webp';
 
 
 const CharInfo = (props) => {
     const {charId} = props;
     const [char, setChar] = useState(null);
     const {getCharacter, clearError, process, setProcess} = useMarvelService();
-    const [isOpen, setIsOpen ] = useState(false)
+    const [isOpen, setIsOpen ] = useState(false);
 
     const onCharLoaded = (char) => {
         setChar(char);
@@ -19,7 +20,6 @@ const CharInfo = (props) => {
     const updateChar = () => {
         if(!charId) return;                                                    //если приходит null, то запрос не делаем
         setIsOpen(true)
-
         clearError();
         getCharacter(charId)
             .then(res => {onCharLoaded(res)})
@@ -37,13 +37,17 @@ const CharInfo = (props) => {
     }
 
     return (
-        <>
-            <div className={isOpen ? 'wrapperInfo' : null} onClick={handleClick}>
-                <div className={ isOpen ? 'char__active char__info' : 'char__info'} >
-                    {setContent(process, View, char)}
-                </div>
+        <div className={isOpen ? 'wrapperInfo' : null} onClick={handleClick}>
+            <div className={ isOpen ? 'char__active char__info' : 'char__info'}>
+                <img
+                    src={closeIcon}
+                    className='char__info-close'
+                    alt={'close icon'}
+                    onClick={handleClick}
+                />
+                {setContent(process, View, char)}
             </div>
-        </>
+        </div>
     )    
 }
 
